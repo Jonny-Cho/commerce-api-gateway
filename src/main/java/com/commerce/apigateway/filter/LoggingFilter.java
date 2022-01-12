@@ -1,6 +1,7 @@
 package com.commerce.apigateway.filter;
 
 import lombok.Getter;
+import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.OrderedGatewayFilter;
@@ -62,6 +63,7 @@ public class LoggingFilter extends AbstractGatewayFilterFactory<LoggingFilter.Co
     }
 
     @Getter
+    @Setter
     public static class Config {
         private String baseMessage;
         private boolean preLogger;
