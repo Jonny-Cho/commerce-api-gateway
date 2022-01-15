@@ -25,16 +25,19 @@ spring:
           predicates:
             - Path=/user-service/**
           filters:
-            - StripPrefix=1
+#            - StripPrefix=1
+            - RewritePath=/user-service/(?<segment>.*), /$\{segment}
         - id: catalog-service
           uri: lb://CATALOG-SERVICE
           predicates:
             - Path=/catalog-service/**
           filters:
-            - StripPrefix=1
+#            - StripPrefix=1
+            - RewritePath=/catalog-service/(?<segment>.*), /$\{segment}
         - id: order-service
           uri: lb://ORDER-SERVICE
           predicates:
             - Path=/order-service/**
           filters:
-            - StripPrefix=1
+#            - StripPrefix=1
+            - RewritePath=/order-service/(?<segment>.*), /$\{segment}
