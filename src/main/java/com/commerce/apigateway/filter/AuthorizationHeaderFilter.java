@@ -1,11 +1,8 @@
 package com.commerce.apigateway.filter;
 
 import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.impl.DefaultJws;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.http.HttpHeaders;
-import org.bouncycastle.pqc.crypto.ExchangePair;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFactory;
 import org.springframework.core.env.Environment;
